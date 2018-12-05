@@ -1,0 +1,88 @@
+﻿{template "content","header"}
+				<div class="container">
+				<div class="row clearfix">
+					<div class="col-md-12 column" >
+						<ul class="breadcrumb"style="background-color:#fff;padding-top:30px;" >
+							<li>
+								  Current position: <a href="javascript:history.go(-1)">Return</a> 
+							
+							
+							</li>
+							<li>
+								 <a href="javascript:;" style="color:#0ba29a;">{$CATEGORYS[$CAT[parentid]][catname]}</a>
+							</li>
+							<li class="active">
+								{$CATEGORYS[$catid][catname]}
+							</li>
+						</ul>
+						
+						
+						
+						<hr style="height:1px;border:none;border-top:1px dashed #0ba29a;" />
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-3 column">
+							<div class="col-md-12 column">
+								<ul class="list-group">
+								{pc:content action="category" catid="13" num="25" siteid="$siteid" order="listorder ASC"}
+ 
+								{loop $data $r} 
+									<li class="list-group-item" style="border:none;font-family:微软雅黑;font-size:16px;margin-bottom:-20px;margin-top:30px;"><a {if $catid!=$r[catid]}style="color:#0ba29a;"{elseif}style="color:#000;"{/if} href="{$r[url]}">{$r[catname]}</a></li>
+									<li style="border:none;border:1px dashed #0ba29a;width:120px;margin-left:0px; list-style:none; ">&nbsp;</li>
+								{/loop}
+ 
+								{/pc}
+									
+								</ul>
+							</div>
+							<div class="col-md-12 column" style="margin-top:50px;">
+							 <p>
+									Suzhou hengyi Automation Co., Ltd.
+								</p>
+								<p>
+									Address: Suzhou city Wujiang District cloud pear road 699 Building No. 7
+								</p>
+								<p>
+									phone：025-66091685
+								</p>
+								<p>
+									fax：025-66091685
+								</p>
+								<p>
+									Contact: Mr. Zhu  18512515806
+								</p>
+								<p>
+									email：guanghai.zhu@lrmation.com 
+
+								</p>
+								<p>
+									Website：http://www.lrmation.com
+ 
+
+								</p>
+							</div>
+						</div>
+						<div class="col-md-9 column" style="margin-top:50px;"> 
+						
+	<form method="post" action="?m=formguide&c=index&a=show&formid=21&action=js&siteid=1" name="myform" id="myform">
+
+										 &nbsp;&nbsp;name：<br />
+										
+										 <input type="text" name="info[xmaa]" id="xmaa" size="50" value="" style="height:40px; width:60%; border:1px solid #0ba29a;">
+										 <br />	<br />
+										 &nbsp;&nbsp;phone：<br />
+										
+										 <input type="text" name="info[dhaa]" id="dhaa" size="50" value="" style="height:40px; width:60%; border:1px solid #0ba29a;">
+										 <br />	<br />
+										 &nbsp;&nbsp;Leaving a message.：<br />
+										 <textarea name="info[lyaa]" id="lyaa" style="height:40px; width:60%; border:1px solid #0ba29a;"></textarea>
+																		 
+<br /><br />
+										<div class="submit ib"><input type="submit" name="dosubmit" id="dosubmit" value=" 提交 " style="color:white;background-color:#0ba29a;width:80px; height:30px;border:0px;margin-left:220px;"></div> 
+	</form>
+						</div>
+					</div>
+					
+               </div>
+					
+				{template "content","footer"}

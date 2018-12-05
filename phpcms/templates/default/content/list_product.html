@@ -1,0 +1,97 @@
+﻿{template "content","header"}
+				<div class="container">
+				<div class="row clearfix">
+					<div class="col-md-12 column" >
+						<ul class="breadcrumb"style="background-color:#fff;padding-top:30px;" >
+							<li>
+								  当前位置： <a href="javascript:history.go(-1)">返回</a> 
+							
+							
+							</li>
+							<li>
+								 <a href="javascript:;" style="color:#0ba29a;">{$CATEGORYS[$CAT[parentid]][catname]}</a>
+							</li>
+							<li class="active">
+								{$CATEGORYS[$catid][catname]}
+							</li>
+						</ul>
+						
+						
+						
+						<hr style="height:1px;border:none;border-top:1px dashed #0ba29a;" />
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-3 column">
+							<div class="col-md-12 column">
+								<ul class="list-group">
+								{pc:content action="category" catid="11" num="25" siteid="$siteid" order="listorder ASC"}
+ 
+								{loop $data $r} 
+									<li class="list-group-item" style="border:none;font-family:微软雅黑;font-size:16px;margin-bottom:-20px;margin-top:30px;"><a {if $catid!=$r[catid]}style="color:#0ba29a;"{elseif}style="color:#000;"{/if} href="{$r[url]}">{$r[catname]}</a></li>
+									<li style="border:none;border:1px dashed #0ba29a;width:120px;margin-left:0px; list-style:none; ">&nbsp;</li>
+								{/loop}
+ 
+								{/pc}
+									
+								</ul>
+							</div>
+							<div class="col-md-12 column" style="margin-top:50px;">
+							 <p>
+									苏州峘一自动化有限公司
+								</p>
+								<p>
+									地址：苏州市吴江区云梨路699号7栋
+								</p>
+								<p>
+									电话：025-66091685
+								</p>
+								<p>
+									传真 ：025-66091685
+								</p>
+								<p>
+									联系人：朱先生  18512515806
+								</p>
+								<p>
+									邮箱：guanghai.zhu@lrmation.com 
+
+								</p>
+								<p>
+									网址：http://www.lrmation.com
+ 
+
+								</p>
+							</div>
+						</div>
+						<div class="col-md-9 column" style="margin-top:50px;">
+										{pc:content action="lists" catid="$catid" order="id" num="2" cache="3600" page="$page"}
+										{loop $data $r} 
+										<div class="media" style="margin-bottom:-20px;">
+											 <a href="{$r[url]}" class="pull-left" >
+											 <img src="{thumb($r['thumb'])}" class="media-object"style="height:100px;width:136px;" alt='' /></a>
+											<div class="media-body" >
+												<p class="media-heading" style="float:left;padding-top:50px;padding-left:20px;font-family:微软雅黑;font-size:16px;" >
+													{$r[title]}
+												</p> 
+												 
+												 <p style="float:right;padding-top:80px;padding-right:50px;color:#0ba29a;"> <a style="color:#0ba29a;" href="{$r[url]}">查看详情</a></p>
+											</div>
+										</div>
+										<hr style="height:1px;border:none;border-top:1px dashed #0ba29a;" />
+										{/loop}
+											
+										
+										
+									
+										<div class="col-md-9 column" style="text-align:center;" >
+										<ul class="pagination" >
+										{$pages}
+											
+										</ul>
+										</div>
+										{/pc}
+							        </div>
+					</div>
+					
+               </div>
+					
+			{template "content","footer"}

@@ -1,0 +1,77 @@
+﻿{template "content","header"}
+				<div class="container">
+				<div class="row clearfix">
+					<div class="col-md-12 column" >
+						<ul class="breadcrumb"style="background-color:#fff;padding-top:30px;" >
+							<li>
+								  Current position: <a href="javascript:history.go(-1)">Return</a> 
+							
+							
+							</li>
+							<li>
+								 <a href="javascript:;" style="color:#0ba29a;">{$CATEGORYS[$CAT[parentid]][catname]}</a>
+							</li>
+							<li class="active">
+								{$CATEGORYS[$catid][catname]}
+							</li>
+						</ul>
+						
+						
+						
+						<hr style="height:1px;border:none;border-top:1px dashed #0ba29a;" />
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-3 column">
+							<div class="col-md-12 column">
+								<ul class="list-group">
+								{pc:content action="category" catid="9" num="25" siteid="$siteid" order="listorder ASC"}
+ 
+								{loop $data $r} 
+									<li class="list-group-item" style="border:none;font-family:微软雅黑;font-size:16px;margin-bottom:-20px;margin-top:30px;"><a {if $catid!=$r[catid]}style="color:#0ba29a;"{elseif}style="color:#000;"{/if} href="{$r[url]}">{$r[catname]}</a></li>
+									<li style="border:none;border:1px dashed #0ba29a;width:120px;margin-left:0px; list-style:none; ">&nbsp;</li>
+								{/loop}
+ 
+								{/pc}
+									
+								</ul>
+							</div>
+							<div class="col-md-12 column" style="margin-top:50px;">
+							 <p>
+									Suzhou hengyi Automation Co., Ltd.
+								</p>
+								<p>
+									Address: Suzhou city Wujiang District cloud pear road 699 Building No. 7
+								</p>
+								<p>
+									phone：025-66091685
+								</p>
+								<p>
+									fax：025-66091685
+								</p>
+								<p>
+									Contact: Mr. Zhu  18512515806
+								</p>
+								<p>
+									email：guanghai.zhu@lrmation.com 
+
+								</p>
+								<p>
+									Website：http://www.lrmation.com
+ 
+
+								</p>
+							</div>
+						</div>
+						<div class="col-md-5 column" style="text-align:center;font-family:微软雅黑;">
+							<h4 style="">Cooperative partner</h4>
+							<img src="{IMG_PATH}ab-coo-par.png" style="margin-top:20px;margin-left:-55px;">
+						</div>
+						<div class="col-md-4 column" style="text-align:center; font-family:微软雅黑;">
+							<h4 style="">Distribution area</h4>
+							<img src="{IMG_PATH}ab-coo-par1.png" style="margin-top:20px;margin-left:-55px;">
+						</div>
+					</div>
+					
+               </div>
+					
+				{template "content","footer"}

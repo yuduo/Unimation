@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>苏州峘一自动化有限公司</title>
+<link href="{CSS_PATH}search.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{JS_PATH}jquery.min.js"></script>
+<script type="text/javascript" src="{JS_PATH}cookie.js"></script>
+<script type="text/javascript" src="{JS_PATH}search_common.js"></script>
+</head>
+<body>
+
+ 
+
+	<div class="clr sr_body sr_list">
+    	<div class="sr_main">
+        	<div class="sr_head">
+            	 </div>
+
+            <div class="wrap sr_logo">
+            	
+                <div class="l">
+                	<div class="sr_frm_box">
+						<form name="search" type="get">
+                        <div class="sr_frmipt">
+						  <input type="hidden" name="m" value="search"/>
+						  <input type="hidden" name="c" value="index"/>
+						  <input type="hidden" name="a" value="init"/>
+						  <input type="hidden" name="typeid" value="{$typeid}" id="typeid"/>
+						  <input type="hidden" name="siteid" value="{$siteid}" id="siteid"/>
+						<input type="text" name="q" class="ipt" id="q" value="{$search_q}">
+						<div class="sp" id="aca">▼</div><input type="submit" class="ss_btn" value="搜 索"></div>
+						</form>
+						<div id="sr_infos" class="wrap sr_infoul">
+						</div>
+                    </div>
+                    <div class="jg">获得约 {$totalnums} 条结果 （用时{sprintf("%01.2f", $execute_time)} 秒）</div>
+                </div>
+            </div>
+            <div class="brd1s"></div>
+            <div class="wrap sr_lists"> 
+                <div class="c wrap">
+                	<ul class="wrap">
+						{loop $data $i $r}
+						<li class="wrap">
+							<div>
+								{if $r['thumb']}<a href="{$r[url]}"><img src="{$r[thumb]}" width="60" height="60" /></a>{/if}
+								<h5><a href="{$r[url]}">{$r[title]}</a>{if $r['posids']}<img src="{IMG_PATH}icon/small_elite.gif">{/if}</h5>
+								<p>{$r[description]}</p>
+							</div>
+							<div class="adds">发布时间：{format::date($r[inputtime], 1)}</div>
+						</li>
+						{/loop}
+						{if empty($data)}未找到结果{/if}
+                    </ul>
+                    <div id="pages" class="text-c mg_t20">{$pages}</div>
+					{if $setting['relationenble']}
+					<div class="wrap sgch"><strong>相关搜索：</strong>
+					{loop $relation $k $v}
+					<a href="?m=search&c=index&a=init&typeid={$typeid}&siteid={$siteid}&q={$v['keyword']}">{$v['keyword']}</a> 
+					{/loop}
+					</div>
+					{/if}
+                </div>
+            </div>
+      </div>
+<script type="text/javascript" src="{JS_PATH}search_history.js"></script>
+{if $setting['suggestenable']}
+<script type="text/javascript" src="{JS_PATH}jquery.suggest.js"></script>
+<script type="text/javascript" src="{JS_PATH}search_suggest.js"></script>
+{/if}
+{template 'search', 'footer'}

@@ -1,0 +1,127 @@
+﻿{template "content","header"}
+				<div class="row clearfix">
+					<div class="col-md-12 column">
+						<div class="row clearfix">
+							<div class="col-md-6 column">
+								<div class="row clearfix">
+									<div class="col-md-12 column">
+										<div class="page-header" style="color:#0ba29a;font-family:微软雅黑;">
+											<h3 style="border-bottom:1px solid #ddd; font-family:微软雅黑;">
+												Recommended products 
+											<br /><br />
+											</h3>
+										</div>
+										{pc:content action="position" posid="18" order="id" num="3" cache="3600"}
+										{loop $data $r} 
+										<div class="media" style="margin-bottom:-20px;">
+											 <a href="{$r[url]}" class="pull-left" ><img src="{thumb($r['thumb'])}" class="media-object"style="height:100px;width:136px;" alt='' /></a>
+											<div class="media-body">
+												<h5 class="media-heading" style="float:left;padding-top:50px;padding-left:20px;font-family:微软雅黑;" >
+													{$CATEGORYS[$r[catid]]['catname']}
+												</h5> 
+												<h5 class="media-heading" style="float:left;padding-top:50px;padding-left:20px; font-family:微软雅黑;" >
+													{$r[title]}
+												</h5  style="float:left;padding-top:50px;" > 
+												   <p style="float:right;padding-top:50px;padding-left:20px;"><a style="color:#0ba29a;" href="{$CATEGORYS[$r[catid]]['url']}"> more+</a></p>
+											</div>
+											
+											
+										</div>
+										<hr style="height:1px;border:none;border-top:2px dashed #0ba29a;" /> 
+										{/loop}
+										{/pc}
+										
+										
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 column">
+								<div class="row clearfix">
+									<div class="col-md-12 column">
+									<div class="page-header" style="color:#0ba29a;font-family:微软雅黑;">
+											<h3 style="border-bottom:1px solid #ddd; font-family:微软雅黑;">
+												About hengyi
+											<br /><br />
+											</h3>
+									</div>
+										<div class="row clearfix">
+											
+											<div class="col-md-5 column" style="color:#555;font-family:宋体; font-weight:500; font-size:13.5px;">
+												<p>
+													Suzhou hengyi Automation Co., Ltd.It is a new and high technology company which integrates research and development, design and system. The main business is intelligent manufacturing.
+Provide reliable automatic single machine, production line and reliable testing equipment. Our aim is urgent customers, think of the customers think. By understanding the real needs of the customers,
+The most reasonable and satisfactory plan is designed to produce efficient, stable and convenient maintenance equipment for customers, providing excellent automation equipment and process solutions to improve customer product quality.
+												</p>
+											</div>
+											<div class="col-md-7 column">
+												<img  src="{IMG_PATH}about.png"  style="width:340px;height:258px;"/>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+					<div class="row clearfix">
+					<div class="col-md-12 column">
+						<div class="row clearfix">
+							<div class="col-md-6 column">
+								
+								<div class="row clearfix">
+									<div class="col-md-12 column">
+										<div class="page-header" style="color:#0ba29a;font-family:微软雅黑;">
+											<h4>
+												Latest announcement
+											</h4>
+										</div>
+										
+										{pc:announce  action="lists" siteid="$siteid" num="3"}
+										 
+										   {loop $data $r}
+											 <p> <a href="{APP_PATH}index.php?m=announce&c=index&a=show&aid={$r['aid']}">{$r['title']}</a></p>.
+											 	<hr style="height:1px;border:none;border-top:1px dashed #0ba29a;" />
+										   {/loop}
+										 
+										{/pc}
+											
+										
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 column">
+								
+								<div class="row clearfix">
+									<div class="col-md-12 column">
+										<div class="page-header" style="color:#0ba29a;font-family:微软雅黑;">
+											<h4>
+												Contact us
+											</h4>
+									    </div>
+										<div class="row clearfix">
+											<div class="col-md-7 column" style="padding-right:0px;">
+												<p style="line-height:12px;">Suzhou hengyi Automation Co., Ltd.</p>
+												<p style="line-height:12px;">Address: Suzhou city Wujiang District cloud pear road 699 Building No. 7</p>
+												<p style="line-height:12px;">phone：025-66091685  fax ：025-66091685</p>
+												
+											</div>
+											<div class="col-md-5 column" style="padding:0px;">
+													<p style="line-height:12px;">
+														Contact: Mr. Zhu  18512515806
+													</p>
+													<p style="line-height:12px;">
+														email：guanghai.zhu@lrmation.com
+													</p>
+													<p style="line-height:12px;">
+														Website：http://www.lrmation.com
+                                                     </p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+{template "content","footer"}				

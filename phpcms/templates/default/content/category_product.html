@@ -1,0 +1,94 @@
+﻿{template "content","header"}
+				<div class="container">
+				<div class="row clearfix">
+					<div class="col-md-12 column" >
+						<ul class="breadcrumb"style="background-color:#fff;padding-top:30px;" >
+							<li>
+								  当前位置： <a href="javascript:history.go(-1)">返回</a> 
+							
+							
+							</li>
+							<li>
+								 <a href="javascript:;" style="color:#0ba29a;">{$CATEGORYS[$CAT[parentid]][catname]}</a>
+							</li>
+							<li class="active">
+								{$CATEGORYS[$catid][catname]}
+							</li>
+						</ul>
+						
+						
+						
+						<hr style="height:1px;border:none;border-top:1px dashed #0ba29a;" />
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-3 column">
+							<div class="col-md-12 column">
+								<ul class="list-group">
+								{pc:content action="category" catid="11" num="25" siteid="$siteid" order="listorder ASC"}
+ 
+								{loop $data $r} 
+									<li class="list-group-item" style="border:none;font-family:微软雅黑;font-size:16px;margin-bottom:-20px;margin-top:30px;{if $catid!=$r[catid]}color:#0ba29a;{/if}">{$r[catname]}</li>
+									<li style="border:none;border:1px dashed #0ba29a;width:120px;margin-left:0px; list-style:none; ">&nbsp;</li>
+								{/loop}
+ 
+								{/pc}
+									
+								</ul>
+							</div>
+							<div class="col-md-12 column" style="margin-top:50px;">
+							 <p>
+									苏州峘一自动化有限公司
+								</p>
+								<p>
+									地址：苏州市吴江区云梨路699号7栋
+								</p>
+								<p>
+									电话：025-66091685
+								</p>
+								<p>
+									传真 ：025-66091685
+								</p>
+								<p>
+									联系人 ：朱先生  18512515806
+								</p>
+								<p>
+									邮箱：guanghai.zhu@lrmation.com 
+
+								</p>
+								<p>
+									网址：http://www.lrmation.com
+ 
+
+								</p>
+							</div>
+						</div>
+						<div class="col-md-9 column">
+							<p style="margin-top:50px;margin-left:-60px;">
+								苏州峘一自动化有限公司是一家集研发、设计与系统集成为一体的高新技术公司，主营业务为智能制造，为客户
+														提供可靠的自动化单机、生产线和可靠的检测设备。我们的宗旨是急客户所急，想客户所想。通过了解客户真实需求，
+														设计最合理满意的方案，给客户生产制造高效、稳定、方便维护的设备，提供卓越的自动化设备及工艺解决方案，提高客户产品质量。
+苏州峘一自动化有限公司是一家集研发、设计与系统集成为一体的高新技术公司，主营业务为智能制造，为客户
+														提供可靠的自动化单机、生产线和可靠的检测设备。我们的宗旨是急客户所急，想客户所想。通过了解客户真实需求，
+														设计最合理满意的方案，给客户生产制造高效、稳定、方便维护的设备，提供卓越的自动化设备及工艺解决方案，提高客户产品质量。
+苏州峘一自动化有限公司是一家集研发、设计与系统集成为一体的高新技术公司，主营业务为智能制造，为客户
+														提供可靠的自动化单机、生产线和可靠的检测设备。我们的宗旨是急客户所急，想客户所想。通过了解客户真实需求，
+														设计最合理满意的方案，给客户生产制造高效、稳定、方便维护的设备，提供卓越的自动化设备及工艺解决方案，提高客户产品质量。
+苏州峘一自动化有限公司是一家集研发、设计与系统集成为一体的高新技术公司，主营业务为智能制造，为客户
+														提供可靠的自动化单机、生产线和可靠的检测设备。我们的宗旨是急客户所急，想客户所想。通过了解客户真实需求，
+														设计最合理满意的方案，给客户生产制造高效、稳定、方便维护的设备，提供卓越的自动化设备及工艺解决方案，提高客户产品质量。														
+							</p>
+							<img src="{IMG_PATH}aboutpr.png" style="margin-left:60px;">
+						</div>
+					</div>
+					
+               </div>
+					
+				<div class="row clearfix">
+					<div class="col-md-12 column " style="background-color:#0ba29a;height:160px;margin-top:36px;color:#fff;">
+					<h5 class="text-center"style="margin-top:60px;">版权所有 ：苏州峘一自动化有限公司</h5>
+					<h5 class="text-center">地址：苏州市吴江区云梨路699号7幢  电话：025-66091685   传真：025-66091685</h5>			<h5 class="text-center"style="">苏ICP备17058586号-1</h5>
+					</div>
+				</div>
+			</div>
+</body>
+</html>

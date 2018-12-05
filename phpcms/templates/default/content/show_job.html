@@ -1,0 +1,74 @@
+﻿{template "content","header"}
+				<div class="container">
+				<div class="row clearfix">
+					<div class="col-md-12 column" >
+						<ul class="breadcrumb"style="background-color:#fff;padding-top:30px;" >
+							<li>
+								  当前位置： <a href="javascript:history.go(-1)">返回</a>   
+							</li>
+							
+							<li class="active">
+								{$CATEGORYS[$catid][catname]}
+							</li>
+						</ul>
+						
+						
+						
+						<hr style="height:1px;border:none;border-top:1px dashed #0ba29a;" />
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-3 column">
+							<div class="col-md-12 column">
+								<ul class="list-group">
+								  
+									<li class="list-group-item" style="border:none;font-family:微软雅黑;font-size:16px;margin-bottom:-20px;margin-top:30px;"><a style="color:#0ba29a;"style="color:#000;"  href="javascript:;">{$CATEGORYS[$catid]['catname']}</a></li>
+									<li style="border:none;border:1px dashed #0ba29a;width:120px;margin-left:0px; list-style:none; ">&nbsp;</li>
+								 
+									
+								</ul>
+							</div>
+							<div class="col-md-12 column" style="margin-top:50px;">
+							 <p>
+									苏州峘一自动化有限公司
+								</p>
+								<p>
+									地址：苏州市吴江区云梨路699号7栋
+								</p>
+								<p>5593
+									电话：025-66091685
+								</p>
+								<p>
+									传真：025-66091685
+								</p>
+								<p>
+									联系人：朱先生  18512515806
+								</p>
+								<p>
+									邮箱：guanghai.zhu@lrmation.com 
+
+								</p>
+								<p>
+									网址：http://www.lrmation.com
+ 
+
+								</p>
+							</div>
+						</div>
+						<div class="col-md-9 column" style="margin-top:50px;">
+										
+										
+										<center><b>{$title}</b></center>
+										<center><hr  style="color:#0ba29a;border:1px solid #0ba29a; width:200px;"/></center>
+										<div class="col-md-6 column"> <b>职位描述：</b><br />
+										{$content}
+										</div>
+										<div class="col-md-6 column"> <b>职位要求：</b><br />
+										{$zwyq}
+										</div>
+										
+        </div>
+					</div>
+					
+               </div>
+					
+				{template "content","footer"}

@@ -1,0 +1,81 @@
+﻿{template "content","header"}
+				<div class="container">
+				<div class="row clearfix">
+					<div class="col-md-12 column" >
+						<ul class="breadcrumb"style="background-color:#fff;padding-top:30px;" >
+							<li>
+								  当前位置： <a href="javascript:history.go(-1)">返回</a> 
+							
+							
+							</li>
+							<li>
+								 <a href="javascript:;" style="color:#0ba29a;">{$CATEGORYS[$CAT[parentid]][catname]}</a>
+							</li>
+							<li class="active">
+								{$CATEGORYS[$catid][catname]}
+							</li>
+						</ul>
+						
+						
+						
+						<hr style="height:1px;border:none;border-top:1px dashed #0ba29a;" />
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-3 column">
+							<div class="col-md-12 column">
+								<ul class="list-group">
+								{pc:content action="category" catid="9" num="25" siteid="$siteid" order="listorder ASC"}
+ 
+								{loop $data $r} 
+									<li class="list-group-item" style="border:none;font-family:微软雅黑;font-size:16px;margin-bottom:-20px;margin-top:30px;"><a {if $catid!=$r[catid]}style="color:#0ba29a;"{elseif}style="color:#000;"{/if} href="{$r[url]}">{$r[catname]}</a></li>
+									<li style="border:none;border:1px dashed #0ba29a;width:120px;margin-left:0px; list-style:none; ">&nbsp;</li>
+								{/loop}
+ 
+								{/pc}
+									
+								</ul>
+							</div>
+							<div class="col-md-12 column" style="margin-top:50px;">
+							 <p>
+									苏州峘一自动化有限公司
+								</p>
+								<p>
+									地址：苏州市吴江区云梨路699号7栋
+								</p>
+								<p>
+									电话：025-66091685
+								</p>
+								<p>
+									传真：025-66091685
+								</p>
+								<p>
+									联系人：朱先生  18512515806
+								</p>
+								<p>
+									邮箱：guanghai.zhu@lrmation.com 
+
+								</p>
+								<p>
+									网址：http://www.lrmation.com
+ 
+
+								</p>
+							</div>
+						</div>
+						<div class="col-md-9 column">
+							<p style="margin-top:50px;margin-left:-60px;">
+苏州峘一自动化有限公司是一家集研发、设计与系统集成为一体的高新技术公司，主营业务为智能制造，为客户提供可靠的自动化单机、生产线和可靠的检测设备。我们的宗旨是急客户所急，想客户所想。通过了解客户真实需求，设计最合理满意的方案，给客户生产制造高效、稳定、方便维护的设备，提供卓越的自动化设备及工艺解决方案，提高客户产品质量。</br>
+2014年3月公司在南京市江宁区莱茵达路正式成立，销售额超700万。 2015年8月，为了扩大公司规模，搬迁至南京市江宁区燕湖路185号，销售额超1500万。2016年，业绩稳步增长，销售额超2000万。2017年7月，设立武汉办事处，主要负责武汉和长沙业务。2017年10月，在苏州市吴江区设立总部，南京作为办事处,销售额预计3000万。自2014年起，公司与美国国家仪器（NI）合作，已成为NI在中国授权的金牌系统集成商之一。</br>
+经过几年的发展，公司规模不断壮大，目前有三个事业部：</br>
+1.自动化事业部：负责自动化装配与制程；自动产线设计与开发，包括单机柜、多机柜、全自动产线、半自动产线；工业机器人制造等；</br>
+2.测功事业部：负责工程类项目总包、设计、开发、现场安装、管理；测试台台架开发等；</br>
+3.测试事业部：负责功能测试设备的装配与制程，为客户提供汽车行业的多样化测试测量方案及设备等</br>
+三个事业部资源共享，互助合作，共同提高。对于特大型项目公司成立跨部门合作Team攻关，确保项目保质保量顺利完成。
+							</p>
+							<img src="{IMG_PATH}aboutpr.png" style="margin-left:-10px;">
+						</div>
+					</div>
+					
+               </div>
+					
+				{template "content","footer"}
